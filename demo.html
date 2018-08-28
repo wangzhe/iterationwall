@@ -1,0 +1,93 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type="text/css">
+    .showMore{list-style-type:none;}
+  </style>
+  
+
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+$('.nav li > div > ul')
+  .find('li:gt(1)') //you want :gt(4) since index starts at 0 and H3 is not in LI
+  .hide()
+  .end()
+  .each(function(){
+      if($(this).children('li').length > 2){ //iterates over each UL and if they have 5+ LIs then adds Show More...
+          $(this).append(
+              $('<li>Show More...</li>')
+              .addClass('showMore')
+              .click(function(){
+                  if($(this).siblings(':hidden').length > 0){
+                      $(this).html('Show Less...').siblings(':hidden').show();
+                  }else{
+                      $(this).html('Show More...').show().siblings('li:gt(1)').hide();
+                  }
+                  //$('.showMore').not(this).show().siblings('li:gt(4)').hide();
+              })
+          );
+     }
+  });
+  
+});//]]> 
+
+</script>
+
+</head>
+<body>
+    <ul class="nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Categorys</a>
+                    <div>
+                        <ul>
+                            <a href="">image</a>
+                        </ul>
+                        <ul>
+                            <h3>Title1</h3>
+                            <li data-bind="100002"><a href="#">1</a></li>
+                            <li data-bind="100028"><a href="#">2</a></li>
+                        </ul>
+                        <ul>
+                            <h3>Title2</h3>
+                            <li data-bind="100000"><a href="#">1</a></li>
+                            <li data-bind="100004"><a href="#">2</a></li>
+                            <li data-bind="100007"><a href="#">3</a></li>
+                            <li data-bind="100009"><a href="#">4</a></li>
+                            <li data-bind="100010"><a href="#">5</a></li>
+                            <li data-bind="100011" style="display: none;"><a href="#">6</a></li>
+                            <li data-bind="100051" style="display: none;"><a href="#">7</a></li>
+                        <li class="showMore">Show More...</li></ul>
+                        <ul>
+                            <h3>Title3</h3>
+                            <li data-bind="100103"><a href="#">1</a></li>
+                            <li data-bind="100105"><a href="#">2</a></li>
+                            <li data-bind="100115"><a href="#">3</a></li>
+                            <li data-bind="200071"><a href="#">4</a></li>
+                            <li data-bind="200072"><a href="#">5</a></li>
+                            <li data-bind="200073" style="display: none;"><a href="#">6</a></li>
+                            <li data-bind="200043" style="display: none;"><a href="#">7</a></li>
+                            <li data-bind="200044" style="display: none;"><a href="#">8</a></li>
+                            <li data-bind="200045" style="display: none;"><a href="#">9</a></li>
+                            <li data-bind="200046" style="display: none;"><a href="#">10</a></li>
+                            <li data-bind="200047" style="display: none;"><a href="#">11</a></li>
+                            <li data-bind="200048" style="display: none;"><a href="#">12</a></li>
+                        <li class="showMore">Show More...</li></ul>  
+                    </div>
+                </li>
+
+            </ul>
+</body></html>

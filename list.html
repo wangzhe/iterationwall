@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	    <title>技术持续分析平台</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/continous-analysis.css" rel="stylesheet">
+		<link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" type="text/css" media="screen">
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bower_components/moment/min/moment.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="navbar-fixed-top">
+			<nav class="super"> 
+			  <a href="#">持续分析平台</a>
+			  <a href="#">业务数据平台</a>
+			  <a href="#">持续集成平台</a>
+			  <a href="#">产品APM监控</a>
+		  </nav>
+		  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				  <div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="list.html">
+						<img alt="Brand" src="images/logo_70x20.png">
+					</a>
+	    		</div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="password" placeholder="有疑问、建议都可以在这里填写提交" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">反馈提交</button>
+          <div class="btn-group">
+      		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">产品列表<span class="caret"></span>
+      		</button>
+          </div>
+          </form>
+        </div>
+	  </div>
+	</nav>
+		</header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<button class="btn btn-danger" id="compose-button">增加新产品组</button>
+		          	<ul class="nav nav-sidebar">
+		          	  <li class="active"><a href="#">列表 <span class="sr-only">(current)</span></a></li>
+		          	  <li><a href="wall.html">进度墙</a></li>
+		          	  <li><a href="#">设置</a></li>
+		          	</ul>
+		        </div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<div class="unestimated">
+			    		<h2>进度列表</h2>
+						<div class="row settime">
+							<div class='col-xs-0 col-sm-2'></div>
+							<div class='col-xs-12 col-sm-4'>
+							    <div class="form-group">
+							        <div class='input-group date' id='datetimepicker6'>
+							            <input type='text' class="form-control" />
+							            <span class="input-group-addon">
+							                <span class="glyphicon glyphicon-calendar"></span>
+							            </span>
+							        </div>
+							    </div>
+							</div>
+							<div class='col-xs-12 col-sm-4'>
+							    <div class="form-group">
+							        <div class='input-group date' id='datetimepicker7'>
+							            <input type='text' class="form-control" />
+							            <span class="input-group-addon">
+							                <span class="glyphicon glyphicon-calendar"></span>
+							            </span>
+							        </div>
+							    </div>
+							</div>
+							<div class='col-xs-12 col-sm-2'>
+				    	    	<button class="btn btn-info">时间段查询</button>
+							</div>
+						</div>
+					    <table class="table table-striped">
+					        <tr>
+					            <th>组名</th>
+					            <th>想法</th>
+					            <th>按时上线</th>
+					            <th>按时验证</th>
+					            <th>RV完成</th>
+					            <th>RV继续</th>
+					            <th>RV改进</th>
+					            <th>RV方向错</th>
+					            <th>RV其他</th>
+					        </tr>
+					        <tr class="success">
+					            <td><a href="product.html">病历工具组</a></td>
+					            <td>10</td>
+					            <td>9（90%）</td>
+					            <td>8（80%）</td>
+					            <td>4（40%）</td>
+					            <td>2（20%）</td>
+					            <td>1（10%）</td>
+					            <td>1（10%）</td>
+					            <td>2（20%）</td>
+					        </tr>
+					        <tr>
+					            <td><a href="product.html">随访组</a></td>
+					            <td>10</td>
+					            <td>9（90%）</td>
+					            <td>8（80%）</td>
+					            <td>4（40%）</td>
+					            <td>2（20%）</td>
+					            <td>1（10%）</td>
+					            <td>1（10%）</td>
+					            <td>2（20%）</td>
+					        </tr>
+					        <tr>
+					            <td><a href="product.html">诊疗圈组</a></td>
+					            <td>10</td>
+					            <td>9（90%）</td>
+					            <td>8（80%）</td>
+					            <td>4（40%）</td>
+					            <td>2（20%）</td>
+					            <td>1（10%）</td>
+					            <td>1（10%）</td>
+					            <td>2（20%）</td>
+					        </tr>
+					        <tr>
+					            <td><a href="#">内容工具组</a></td>
+					            <td>10</td>
+					            <td>9（90%）</td>
+					            <td>8（80%）</td>
+					            <td>4（40%）</td>
+					            <td>2（20%）</td>
+					            <td>1（10%）</td>
+					            <td>1（10%）</td>
+					            <td>2（20%）</td>
+					        </tr>
+					        <tr>
+					            <td><a href="#">病历夹网站组</a></td>
+					            <td>10</td>
+					            <td>9（90%）</td>
+					            <td>8（80%）</td>
+					            <td>4（40%）</td>
+					            <td>2（20%）</td>
+					            <td>1（10%）</td>
+					            <td>1（10%）</td>
+					            <td>2（20%）</td>
+					        </tr>
+					    </table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	    $(function () {
+	        $('#datetimepicker6').datetimepicker();
+	        $('#datetimepicker7').datetimepicker({
+	            useCurrent: false //Important! See issue #1075
+	        });
+	        $("#datetimepicker6").on("dp.change", function (e) {
+	            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+	        });
+	        $("#datetimepicker7").on("dp.change", function (e) {
+	            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+	        });
+	    });
+	</script>
+</body>
+</html>

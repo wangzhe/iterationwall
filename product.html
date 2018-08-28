@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	    <title>技术持续分析平台</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/continous-analysis.css" rel="stylesheet">
+		<link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" type="text/css" media="screen">
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bower_components/moment/min/moment.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/continuous-analysis.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<header class="navbar-fixed-top">
+			<nav class="super"> 
+			  <a href="#">持续分析平台</a>
+			  <a href="#">业务数据平台</a>
+			  <a href="#">持续集成平台</a>
+			  <a href="#">产品APM监控</a>
+		  </nav>
+		  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				  <div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="list.html">
+						<img alt="Brand" src="images/logo_70x20.png">
+					</a>
+	    		</div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="password" placeholder="有疑问、建议都可以在这里填写提交" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">反馈提交</button>
+          <div class="btn-group">
+      		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">病历工具<span class="caret"></span>
+      		</button>
+          </div>
+          </form>
+        </div>
+	  </div>
+	</nav>
+		</header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<button class="btn btn-danger" id="compose-button" onclick="location.href='#openModal'">新建迭代</button>
+		          	<ul class="nav nav-sidebar">
+		          	  <li class="active"><a href="#">4.7.0 <span class="sr-only">(current)</span></a></li>
+		          	  <li><a href="#">4.6.0</a></li>
+		          	  <li><a href="#">4.5.0</a></li>
+		          	  <li><a href="#">4.4.0</a></li>
+		          	  <li><a href="#">4.3.0</a></li>
+			          <li><a href="#">4.2.0</a></li>
+			          <li><a href="#">4.1.0</a></li>
+			          <li><a href="#">4.0.0</a></li>
+			          <li><a href="#">3.9.0</a></li>
+		          	</ul>
+		        </div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<div class="iteration">
+			    		<h2>想法(Idea)</h2>
+						<textarea class="form-control" rows="3" readonly>你的想法会在这里出现，想法不可编辑.</textarea>
+			    		<h2>迭代(Build)－产品(Product)</h2>
+						<div class="row build">
+							<div class="col-xs-8 col-sm-4  text-message">距离上线日：还有1天</div>
+				    	    <button class="col-xs-3 col-sm-2 btn btn-info" disabled>提交上线</button>
+							<div class="col-xs-8 col-sm-4 text-message">距离评估日：还有22天</div>
+				    	    <button class="col-xs-3 col-sm-2 btn btn-info">提交评估</button>
+						</div>
+			    		<h2>衡量(Measure)－数据(Data)</h2>
+						<div class="row placeholders">
+				            <div class="col-xs-12 col-sm-6 placeholder">
+  							  <input class="form-control" type="text" placeholder="点击数量" readonly/>
+				              <div class="text-muted">本期迭代预期点击数量为100</div>
+				              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+				            </div>
+				            <div class="col-xs-12 col-sm-6 placeholder">
+							  <input class="form-control" type="text" placeholder="使用人数" readonly/>
+							  <div class="text-muted">本期迭代预期2周后使用人数为30</div>
+				              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+				            </div>
+				        </div>
+			    		<h2>回顾总结(Learn)</h2>
+						<textarea class="form-control" rows="3" readonly>尚未总结</textarea>
+					</div>
+					<div class="unestimated">
+			    		<h2>未关闭（待验证的想法）</h2>
+
+					    <table class="table table-striped">
+					        <tr>
+					            <th>迭代名</th>
+					            <th>距离上线</th>
+					            <th>距离评估</th>
+					        </tr>
+					        <tr class="success">
+					            <td><a herf="#">4.6.0</a></td>
+					            <td>还有1天</td>
+					            <td>还有20天</td>
+					        </tr>
+					        <tr>
+					            <td><a herf="#">4.5.0</a></td>
+					            <td>2015-09-01</td>
+					            <td>还有1天</td>
+					        </tr>
+					        <tr>
+					            <td><a herf="#">4.4.0</a></td>
+					            <td>2015-08-15</td>
+					            <td>过期10天</td>
+					        </tr>
+					    </table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="openModal" class="modalDialog main">
+			<div class="iteration">
+				<form id="new_iteration">
+					<a href="#close" title="Close" class="close">X</a>
+	    			<h2>想法(Idea)</h2>
+					<textarea class="form-control" rows="3" placeholder="你的想法会在这里出现，想法不可编辑."></textarea>
+	    			<h2>迭代(Build)－产品(Product)</h2>
+					<div class="row settime">
+						<div class="col-xs-4 col-sm-2  text-message">预期上线日：</div>
+						<div class='col-xs-8 col-sm-4'>
+						    <div class="form-group">
+						        <div class='input-group date' id='datetimepicker6'>
+						            <input type='text' class="form-control" />
+						            <span class="input-group-addon">
+						                <span class="glyphicon glyphicon-calendar"></span>
+						            </span>
+						        </div>
+						    </div>
+						</div>
+						<div class="col-xs-4 col-sm-2 text-message">预期评估日：</div>
+						<div class='col-xs-8 col-sm-4'>
+						    <div class="form-group">
+						        <div class='input-group date' id='datetimepicker7'>
+						            <input type='text' class="form-control" />
+						            <span class="input-group-addon">
+						                <span class="glyphicon glyphicon-calendar"></span>
+						            </span>
+						        </div>
+						    </div>
+						</div>
+					</div>
+	    			<h2>衡量(Measure)－数据(Data)</h2>
+					<div class="row">
+		        	    <div class="col-xs-12 col-sm-6 placeholder">
+						  <input class="form-control" type="text" placeholder="衡量数据名"/>
+						  <input class="form-control" type="text" placeholder="衡量数据描述"/>
+						  <textarea class="form-control" rows="3" placeholder="SQL/NOSQL Shell"></textarea>
+		        	    </div>
+		        	    <div class="col-xs-12 col-sm-6 placeholder">
+						  <input class="form-control" type="text" placeholder="衡量数据名"/>
+						  <input class="form-control" type="text" placeholder="衡量数据描述"/>
+						  <textarea class="form-control" rows="3" placeholder="SQL/NOSQL Shell"></textarea>
+		        	    </div>
+		        	</div>
+	            	<button type="submit" class="btn btn-primary">提交</button>
+				<form>
+			</div>
+		</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.min.js"></script>
+
+
+
+	<script type="text/javascript">
+	    $(function () {
+	        $('#datetimepicker6').datetimepicker();
+	        $('#datetimepicker7').datetimepicker({
+	            useCurrent: false //Important! See issue #1075
+	        });
+	        $("#datetimepicker6").on("dp.change", function (e) {
+	            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+	        });
+	        $("#datetimepicker7").on("dp.change", function (e) {
+	            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+	        });
+	    });
+	</script>
+</body>
+</html>

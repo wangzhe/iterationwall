@@ -1,0 +1,59 @@
+html,
+body {
+    height: 100%;
+    background-color: green;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-caption {
+    color: #f29e33;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.iteration {
+    margin-top: 13%;
+    width: 100%;
+    height: auto;
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.weektitle {
+    width: 100%;
+    height: auto;
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.prompt {
+    margin-top: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: auto;
+    font-size: large;
+    font-weight: 600;
+    text-align: left;
+    color: whitesmoke;
+}
+
+.row {
+    padding: 5px;
+}
+
+footer {
+    margin: 50px 0;
+}

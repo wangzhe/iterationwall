@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Display Wall</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/wall.css" rel="stylesheet">
+    <script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body ng-app="myApp">
+<div class="main" ng-controller="MainController">
+    <div class="weektitle">
+        <div class="row">
+            {{ day_of_week | date:'EEEE' }}
+        </div>
+    </div>
+    <div class="iteration">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                循环迭代号：No.{{ iterationsNumber }}
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                今天是迭代第 {{ iteration_days_from_start }} 天
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                还有 {{ iteration_days_left }} 日迭代结束
+            </div>
+        </div>
+    </div>
+    <div class="prompt">
+        今日完成提示：
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                交互：{{ iteration.ue_task }}
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                PTL：{{ iteration.ptl_task }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                开发：{{ iteration.dev_task }}
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                PM：{{ iteration.pm_task }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                测试：{{ iteration.test_task }}
+            </div>
+            <div class="col-xs-12 col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/controller/WallController.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "continous-analysis",
+  "version": "0.1.0",
+  "authors": [
+    "Jack Wang <wangzhe.cs@gmail.com>"
+  ],
+  "description": "continous analysis platform for PM and PTL",
+  "main": "javascript/continous-analysis.js",
+  "license": "MIT",
+  "homepage": "wangzhe.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37"
+  }
+}
